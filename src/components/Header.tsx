@@ -28,7 +28,11 @@ export default function Header() {
     >
       <h1 className="logo">
         <a href={baseUrl}>
-          <img src={baseUrl + "/assets/images/logo.svg"} alt="logo" />
+          <img
+            src={baseUrl + "/assets/images/logo.svg"}
+            alt="logo"
+            className="h-9"
+          />
         </a>
         <div className="sr-only">Home</div>
       </h1>
@@ -72,11 +76,11 @@ export default function Header() {
 
           <Link
             to="/recipes"
-            className="flex justify-start items-center p-2 
+            className="flex justify-center items-center p-2 
             w-full
             bg-green-950 text-white rounded-xl
             text-preset-5 
-            text-left
+            
             md:hidden"
           >
             Browese Recipes
@@ -92,10 +96,15 @@ export default function Header() {
       </Link>
       <button
         type="button"
-        className="bg-gray-200 rounded md:hidden p-2"
+        className="bg-gray-200 
+         rounded md:hidden p-2"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
-        <img src={baseUrl + "/assets/images/icon-hamburger-menu.svg"} alt="" />
+        <img
+          src={baseUrl + "/assets/images/icon-hamburger-menu.svg"}
+          alt=""
+          className="h-5"
+        />
       </button>
     </header>
   );
