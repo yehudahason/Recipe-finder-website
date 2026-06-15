@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+@import "tailwindcss";
+@theme {
+  --text-preset-1: 4.5rem;
+  --text-preset-2: 3rem;
+  --text-preset-3: 2rem;
+  --text-preset-4: 1.5rem;
+  --text-preset-5: 1.25rem;
+  --text-preset-6: 1.25rem;
+  --text-preset-7: 1.125rem;
+  --text-preset-8: 1rem;
+  --text-preset-9: 1rem;
+  --text-preset-10: 0.875rem;
+}
+
+@layer components {
+  .text-preset-1 {
+    font-size: var(--text-preset-1);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.125rem;
+  }
+
+  .text-preset-2 {
+    font-size: var(--text-preset-2);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.125rem;
+  }
+
+  .text-preset-3 {
+    font-size: var(--text-preset-3);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.0625rem;
+  }
+
+  .text-preset-4 {
+    font-size: var(--text-preset-4);
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.0625rem;
+  }
+
+  .text-preset-5 {
+    font-size: var(--text-preset-5);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.03125rem;
+    font-family: "Nunito";
+  }
+
+  .text-preset-6 {
+    font-size: var(--text-preset-6);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.025rem;
+  }
+
+  .text-preset-7 {
+    font-size: var(--text-preset-7);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: -0.01875rem;
+  }
+
+  .text-preset-8 {
+    font-size: var(--text-preset-8);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.01875rem;
+  }
+
+  .text-preset-9 {
+    font-size: var(--text-preset-9);
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: -0.01875rem;
+  }
+
+  .text-preset-10 {
+    font-size: var(--text-preset-10);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: -0.01875rem;
+  }
+}
