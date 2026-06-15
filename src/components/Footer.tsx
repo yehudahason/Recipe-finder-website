@@ -1,4 +1,5 @@
 import Footer2 from "./Footer2";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const baseUrl = import.meta.env.BASE_URL;
@@ -21,9 +22,16 @@ export default function Footer() {
           Made with &nbsp; ❤️ and &nbsp; 🥑
         </span>
         <span className="flex items-center justify-center gap-4">
-          <img src={baseUrl + "/assets/images/icon-instagram.svg"} alt="" />
-          <img src={baseUrl + "/assets/images/icon-tiktok.svg"} alt="" />
-          <img src={baseUrl + "/assets/images/icon-bluesky.svg"} alt="" />
+          <Link to="#">
+            <img src={baseUrl + "/assets/images/icon-instagram.svg"} alt="" />
+          </Link>
+          <Link to="#">
+            <img src={baseUrl + "/assets/images/icon-tiktok.svg"} alt="" />
+          </Link>
+
+          <Link to="#">
+            <img src={baseUrl + "/assets/images/icon-bluesky.svg"} alt="" />
+          </Link>
         </span>
       </div>
       <Footer2 />
