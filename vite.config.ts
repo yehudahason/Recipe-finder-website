@@ -12,5 +12,5 @@ export default defineConfig({
     setupFiles: "./src/setupTests.ts",
     css: true,
   },
-  base: "/recipe-finder/", //Github Repo Url
+  base: "/Recipe-finder-website/", //Github Repo Url
 });
