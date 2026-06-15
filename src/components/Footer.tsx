@@ -10,7 +10,9 @@ export default function Footer() {
       sm:flex-row 
       flex-col
       gap-6
-      items-center justify-between max-w-300"
+      items-center justify-between max-w-300 
+        lg:px-0
+        px-8"
       >
         <span
           className="flex items-center  justify-center text-preset-9

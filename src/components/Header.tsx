@@ -23,9 +23,7 @@ export default function Header() {
     };
   }, []);
   return (
-    <header
-      className={`relative max-w-360 header flex flex-row justify-between mx-auto items-center${isMenuOpen ? "open" : ""} px-5 py-4 border-b border-green-950`}
-    >
+    <header className="relative max-w-360 header flex flex-row justify-between mx-auto items-center px-5 py-4 border-b border-green-950 xl:px-20">
       <h1 className="logo">
         <a href={baseUrl}>
           <img
