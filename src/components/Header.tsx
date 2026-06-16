@@ -15,9 +15,9 @@ export default function Header() {
         setIsMobile(true);
       }
     };
-
     window.addEventListener("resize", handleResize);
 
+    handleResize();
     return () => {
       window.removeEventListener("resize", handleResize);
     };
@@ -35,7 +35,7 @@ export default function Header() {
         <div className="sr-only">Home</div>
       </h1>
       <nav
-        className={`absolute md:static top-[102%] z-10 nav flex flex-row items-center w-full md:w-fit transition-all duration-300 ease-in-out
+        className={`absolute md:static top-[102%] z-20 nav flex flex-row items-center w-full md:w-fit transition-all duration-300 ease-in-out
          ${
            isMobile
              ? isMenuOpen
