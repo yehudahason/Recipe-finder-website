@@ -19,7 +19,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             
             md:hidden`,children:`Browese Recipes`})]})}),(0,B.jsx)(z,{to:`#`,className:`hidden md:flex none  items-center justify-center py-3 px-4 bg-green-950 text-white rounded-xl
         text-preset-5 `,children:`Browse Recipes`}),(0,B.jsx)(`button`,{type:`button`,className:`bg-gray-200 
-         rounded md:hidden p-2`,onClick:()=>t(!e),children:(0,B.jsx)(`img`,{src:`/Recipe-finder-website//assets/images/icon-hamburger-menu.svg`,alt:``,className:`h-5`})})]})}function na(){return(0,B.jsxs)(`div`,{className:`attribution`,children:[`Challenge by`,(0,B.jsx)(`a`,{href:`https://www.frontendmentor.io?ref=challenge`,target:`_blank`,rel:`noopener noreferrer`,children:`Frontend Mentor`}),(0,B.jsx)(`span`,{className:`separator`,"aria-hidden":`true`,children:`•`}),`Coded by`,(0,B.jsx)(`a`,{href:`https://www.frontendmentor.io/profile/yehudahason`,target:`_blank`,rel:`noopener noreferrer`,children:`@Yehuda Hason`})]})}function ra(){return(0,B.jsxs)(`footer`,{className:`footer flex flex-col items-center justify-center max-w-360 mx-auto`,children:[(0,B.jsxs)(`div`,{className:`flex w-full
+         rounded md:hidden p-2`,onClick:()=>t(!e),children:(0,B.jsx)(`img`,{src:`/Recipe-finder-website//assets/images/icon-hamburger-menu.svg`,alt:``,className:`h-5`})})]})}function na(){return(0,B.jsxs)(`div`,{className:`attribution`,children:[`Challenge by`,(0,B.jsx)(`a`,{href:`https://www.frontendmentor.io?ref=challenge`,target:`_blank`,rel:`noopener noreferrer`,children:`Frontend Mentor`}),(0,B.jsx)(`span`,{className:`separator`,"aria-hidden":`true`,children:`•`}),`Coded by`,(0,B.jsx)(`a`,{href:`https://www.frontendmentor.io/profile/yehudahason`,target:`_blank`,rel:`noopener noreferrer`,children:`@Yehuda Hason`})]})}function ra(){return(0,B.jsxs)(`footer`,{className:`footer flex flex-col items-center justify-center max-w-360 mx-auto mt-8`,children:[(0,B.jsxs)(`div`,{className:`flex w-full
       sm:flex-row 
       flex-col
       gap-6
@@ -30,10 +30,33 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
       justify-center
       `,children:[(0,B.jsxs)(`h1`,{className:`lg:text-preset-1  text-preset-2 text-green-950`,children:[(0,B.jsxs)(`span`,{className:`relative inline-block`,children:[(0,B.jsx)(`span`,{className:`relative z-10`,children:`Healthy`}),(0,B.jsx)(`span`,{className:`absolute left-0 bottom-0 w-[103%] h-10 bg-[#EBC9B3] rounded -z-10 shadow`})]}),` `,`meals, zero fuss`]}),(0,B.jsx)(`p`,{className:`text-preset-6 text-neutral-800
       
-      max-w-150 lg:text-center text-left`,children:`Discover eight quick, whole-food recipes that you can cook tonight —no processed junk, no guesswork.`}),(0,B.jsxs)(`a`,{href:``,className:`py-2 px-6 bg-green-950 rounded text-white text-preset-5 lg:self-center self-start`,children:[`Start exploring`,` `]})]}),(0,B.jsx)(`div`,{className:`xl:h-[530px] xl:w-[1192px] w-full  rounded-2xl overflow-hidden`,children:(0,B.jsx)(`img`,{src:`${V}/assets/images/image-home-hero-small.webp`,alt:``,className:`w-full h-full object-cover`})}),(0,B.jsx)(`h2`,{className:`text-preset-2 text-green-950 lg:text-center text-left w-full`,children:`What you'll get`}),(0,B.jsxs)(`div`,{className:`grid lg:grid-cols-3  gap-4 grid-cols-1
+      max-w-150 lg:text-center text-left`,children:`Discover eight quick, whole-food recipes that you can cook tonight —no processed junk, no guesswork.`}),(0,B.jsxs)(`a`,{href:``,className:` p-4 bg-green-950 rounded-xl text-white text-preset-5 lg:self-center self-start`,children:[`Start exploring`,` `]})]}),(0,B.jsx)(`div`,{className:`xl:h-[530px] xl:w-[1192px] w-full  rounded-2xl overflow-hidden`,children:(0,B.jsx)(`img`,{src:`${V}/assets/images/image-home-hero-small.webp`,alt:``,className:`w-full h-full object-cover`})}),(0,B.jsx)(`h2`,{className:`text-preset-2 text-green-950 lg:text-center text-left w-full`,children:`What you'll get`}),(0,B.jsxs)(`div`,{className:`grid lg:grid-cols-3  gap-4 grid-cols-1
       w-full  lg:justify-items-center border-b pb-12 border-gray-400
       max-w-[1440px]
       `,children:[(0,B.jsxs)(`span`,{className:`lg:max-w-[370px] pr-4 flex flex-col gap-4`,children:[(0,B.jsx)(`img`,{src:`${V}/assets/images/icon-whole-food-recipes.svg`,alt:``,className:`bg-white w-[3rem] h-[3rem] py-1 px-3 rounded`}),(0,B.jsx)(`h3`,{className:`text-preset-3`,children:`Whole-food recipes `}),(0,B.jsx)(`p`,{className:`text-preset-6 text-neutral-800`,children:`Each dish uses everyday, unprocessed ingredients.`})]}),(0,B.jsxs)(`span`,{className:`lg:max-w-[370px] pr-4`,children:[(0,B.jsx)(`img`,{src:`${V}/assets/images/icon-minimum-fuss.svg`,alt:``,className:`bg-white p-1 w-[3rem] h-[3rem] rounded`}),(0,B.jsx)(`h3`,{className:`text-preset-3`,children:`Minimum fuss`}),(0,B.jsx)(`p`,{className:`text-preset-6 text-neutral-800`,children:`All recipes are designed to make eating healthy quick and easy.`})]}),(0,B.jsxs)(`span`,{className:`lg:max-w-[370px] pr-4`,children:[(0,B.jsx)(`img`,{src:`${V}/assets/images/icon-search-in-seconds.svg`,alt:``,className:`bg-white p-1 
-            w-[3rem] h-[3rem] rounded`}),(0,B.jsx)(`h3`,{className:`text-preset-3`,children:`Search in seconds`}),(0,B.jsx)(`p`,{className:`text-preset-6 text-neutral-800`,children:`Filter by name or ingredient and jump straight to the recipe you need.`})]})]}),(0,B.jsxs)(`div`,{className:`flex flex-col xl:flex-row justify-center items-center gap-6 max-w-[1440px]`,children:[(0,B.jsxs)(`span`,{className:`xl:w-1/2
-        xl:max-w-[500px]: xl:px-6 flex flex-col gap-4`,children:[(0,B.jsx)(`h2`,{className:`text-preset-2 text-green-950`,children:`Built for real life`}),(0,B.jsxs)(`p`,{className:`text-preset-6 text-neutral-800`,children:[` `,`Cooking shouldn't be complicated. These recipes come in under 30 minutes of active time, fit busy schedules, and taste good enough to repeat.`]}),(0,B.jsx)(`p`,{className:`text-preset-6 text-neutral-800`,children:`Whether you're new to the kitchen or just need fresh ideas, we've got you covered.`})]}),(0,B.jsx)(`img`,{src:`${V}/assets/images/image-home-real-life-large.webp`,className:`xl:w-[700px]
-          rounded w-full h-full object-cover`})]}),(0,B.jsx)(`h2`,{children:`Ready to cook smarter?`}),(0,B.jsx)(`p`,{children:` Hit the button, pick a recipe, and get dinner on the table—fast.`}),(0,B.jsx)(`a`,{href:``,children:`Browse recipes`})]})}var sa=ji([{element:(0,B.jsx)(aa,{}),children:[{path:`/`,element:(0,B.jsx)(oa,{})}]}]);(0,Qi.createRoot)(document.getElementById(`root`)).render((0,B.jsx)(x.StrictMode,{children:(0,B.jsx)(Br,{router:sa})}));
+            w-[3rem] h-[3rem] rounded`}),(0,B.jsx)(`h3`,{className:`text-preset-3`,children:`Search in seconds`}),(0,B.jsx)(`p`,{className:`text-preset-6 text-neutral-800`,children:`Filter by name or ingredient and jump straight to the recipe you need.`})]})]}),(0,B.jsxs)(`div`,{className:`flex flex-col xl:flex-row justify-between items-center gap-4 max-w-[1440px] w-full`,children:[(0,B.jsxs)(`span`,{className:`xl:w-1/2
+        xl:max-w-[500px]: xl:px-6 flex flex-col gap-4`,children:[(0,B.jsx)(`h2`,{className:`text-preset-2 text-green-950`,children:`Built for real life`}),(0,B.jsxs)(`p`,{className:`text-preset-6 text-neutral-800 xl:max-w-[550px]`,children:[` `,`Cooking shouldn't be complicated. These recipes come in under`,(0,B.jsxs)(`span`,{className:`relative
+            inline-block
+             `,children:[`30 minutes`,(0,B.jsx)(`span`,{className:`absolute left-0 bottom-1 w-[103%] h-4 bg-orange-400 rounded -z-10 shadow`})]}),`of active time, fit busy schedules, and taste good enough to repeat.`]}),(0,B.jsx)(`p`,{className:`text-preset-6 text-neutral-800 xl:max-w-[550px]`,children:`Whether you're new to the kitchen or just need fresh ideas, we've got you covered.`})]}),(0,B.jsx)(`img`,{src:`${V}/assets/images/image-home-real-life-large.webp`,className:`xl:w-[700px]
+          rounded w-full h-full object-cover`})]}),(0,B.jsxs)(`div`,{className:`flex flex-col justify-center items-center
+        relative
+        w-full max-w-[1440px]
+        bg-blue-50 rounded-2xl
+        h-100
+        overflow-hidden
+        gap-6
+        p-4
+      `,children:[(0,B.jsx)(`img`,{src:`${V}/assets/images/pattern-fork.svg`,alt:``,className:`absolute -left-17 bottom-0
+          z-0
+          lg:block hidden
+          `}),(0,B.jsx)(`img`,{src:`${V}/assets/images/pattern-knife.svg`,alt:``,className:`absolute -right-17 top-5
+          lg:block hidden
+          z-0`}),(0,B.jsx)(`h2`,{className:`sm:text-preset-2 
+          text-preset-3
+          text-green-950 text-center
+        z-10`,children:`Ready to cook smarter?`}),(0,B.jsxs)(`p`,{className:`text-preset-6 text-neutral-800
+        z-10 text-center`,children:[` `,`Hit the button, pick a recipe, and get dinner on the table—fast.`]}),(0,B.jsx)(`a`,{href:``,className:` p-4 bg-green-950 rounded-xl
+        text-white
+        text-preset-5
+        z-10
+        `,children:`Browse recipes`})]})]})}var sa=ji([{element:(0,B.jsx)(aa,{}),children:[{path:`/`,element:(0,B.jsx)(oa,{})}]}]);(0,Qi.createRoot)(document.getElementById(`root`)).render((0,B.jsx)(x.StrictMode,{children:(0,B.jsx)(Br,{router:sa})}));
