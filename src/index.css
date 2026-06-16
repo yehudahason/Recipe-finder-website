@@ -55,7 +55,7 @@
     font-size: var(--text-preset-6);
     font-weight: 500;
     line-height: 1.5;
-    letter-spacing: -0.025rem;
+    letter-spacing: 0;
   }
 
   .text-preset-7 {
@@ -89,4 +89,13 @@
 
 body {
   background-color: rgb(248, 244, 239);
+  background-image: url("/assets/images/pattern-squiggle-1.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top center;
+}
+@media (max-width: 767px) {
+  body {
+    background-position: 50% 20%;
+  }
 }

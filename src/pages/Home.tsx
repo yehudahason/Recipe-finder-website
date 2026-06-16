@@ -25,7 +25,7 @@ export default function Home() {
         </p>
         <a
           href=""
-          className="py-2 px-6 bg-green-950 rounded text-white text-preset-5 lg:self-center self-start"
+          className=" p-4 bg-green-950 rounded-xl text-white text-preset-5 lg:self-center self-start"
         >
           Start exploring{" "}
         </a>
@@ -86,19 +86,26 @@ export default function Home() {
         </span>
       </div>
 
-      <div className="flex flex-col xl:flex-row justify-center items-center gap-6 max-w-[1440px]">
+      <div className="flex flex-col xl:flex-row justify-between items-center gap-4 max-w-[1440px] w-full">
         <span
           className="xl:w-1/2
         xl:max-w-[500px]: xl:px-6 flex flex-col gap-4"
         >
           <h2 className="text-preset-2 text-green-950">Built for real life</h2>
-          <p className="text-preset-6 text-neutral-800">
+          <p className="text-preset-6 text-neutral-800 xl:max-w-[550px]">
             {" "}
-            Cooking shouldn't be complicated. These recipes come in under 30
-            minutes of active time, fit busy schedules, and taste good enough to
-            repeat.
+            Cooking shouldn't be complicated. These recipes come in under
+            <span
+              className="relative
+            inline-block
+             "
+            >
+              30 minutes
+              <span className="absolute left-0 bottom-1 w-[103%] h-4 bg-orange-400 rounded -z-10 shadow"></span>
+            </span>
+            of active time, fit busy schedules, and taste good enough to repeat.
           </p>
-          <p className="text-preset-6 text-neutral-800">
+          <p className="text-preset-6 text-neutral-800 xl:max-w-[550px]">
             Whether you're new to the kitchen or just need fresh ideas, we've
             got you covered.
           </p>
@@ -109,9 +116,55 @@ export default function Home() {
           rounded w-full h-full object-cover"
         />
       </div>
-      <h2>Ready to cook smarter?</h2>
-      <p> Hit the button, pick a recipe, and get dinner on the table—fast.</p>
-      <a href="">Browse recipes</a>
+      <div
+        className="flex flex-col justify-center items-center
+        relative
+        w-full max-w-[1440px]
+        bg-blue-50 rounded-2xl
+        h-100
+        overflow-hidden
+        gap-6
+        p-4
+      "
+      >
+        <img
+          src={`${baseUrl}/assets/images/pattern-fork.svg`}
+          alt=""
+          className="absolute -left-17 bottom-0
+          z-0"
+        />
+        <img
+          src={`${baseUrl}/assets/images/pattern-knife.svg`}
+          alt=""
+          className="absolute -right-17 top-5
+          z-0"
+        />
+        <h2
+          className="sm:text-preset-2 
+          text-preset-3
+          text-green-950 text-center
+        z-10"
+        >
+          Ready to cook smarter?
+        </h2>
+        <p
+          className="text-preset-6 text-neutral-800
+        z-10 text-center"
+        >
+          {" "}
+          Hit the button, pick a recipe, and get dinner on the table—fast.
+        </p>
+        <a
+          href=""
+          className=" p-4 bg-green-950 rounded-xl
+        text-white
+        text-preset-5
+        z-10
+        "
+        >
+          Browse recipes
+        </a>
+      </div>
     </main>
   );
 }

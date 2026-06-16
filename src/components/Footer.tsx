@@ -5,7 +5,7 @@ export default function Footer() {
   const baseUrl = import.meta.env.BASE_URL;
 
   return (
-    <footer className="footer flex flex-col items-center justify-center max-w-360 mx-auto">
+    <footer className="footer flex flex-col items-center justify-center max-w-360 mx-auto mt-8">
       <div
         className="flex w-full
       sm:flex-row 
