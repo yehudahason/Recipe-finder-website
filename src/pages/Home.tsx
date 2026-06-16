@@ -131,12 +131,15 @@ export default function Home() {
           src={`${baseUrl}/assets/images/pattern-fork.svg`}
           alt=""
           className="absolute -left-17 bottom-0
-          z-0"
+          z-0
+          lg:block hidden
+          "
         />
         <img
           src={`${baseUrl}/assets/images/pattern-knife.svg`}
           alt=""
           className="absolute -right-17 top-5
+          lg:block hidden
           z-0"
         />
         <h2
