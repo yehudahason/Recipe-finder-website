@@ -58,7 +58,7 @@ export default function Home() {
             Each dish uses everyday, unprocessed ingredients.
           </p>
         </span>
-        <span className="lg:max-w-[370px] pr-4">
+        <span className="lg:max-w-[370px] pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-minimum-fuss.svg`}
             alt=""
@@ -71,7 +71,7 @@ export default function Home() {
           </p>
         </span>
 
-        <span className="lg:max-w-[370px] pr-4">
+        <span className="lg:max-w-[370px] pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-search-in-seconds.svg`}
             alt=""
@@ -101,7 +101,7 @@ export default function Home() {
              "
             >
               30 minutes
-              <span className="absolute left-0 bottom-1 w-[103%] h-4 bg-orange-400 rounded -z-10 shadow"></span>
+              <span className="absolute left-0 bottom-1 w-[100%] h-4 bg-orange-400 rounded -z-10 shadow"></span>
             </span>
             of active time, fit busy schedules, and taste good enough to repeat.
           </p>
