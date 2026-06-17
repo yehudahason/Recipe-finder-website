@@ -1,11 +1,38 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { useLocation } from "react-router-dom";
 const baseUrl = import.meta.env.BASE_URL;
-
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const location = useLocation();
+  const navRef = useRef<HTMLElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Node;
+
+      if (
+        isMenuOpen &&
+        navRef.current &&
+        !navRef.current.contains(target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(target)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -35,6 +62,7 @@ export default function Header() {
         <div className="sr-only">Home</div>
       </h1>
       <nav
+        ref={navRef}
         className={`absolute md:static top-[102%] z-20 nav flex flex-row items-center w-full md:w-fit transition-all duration-300 ease-in-out
          ${
            isMobile
@@ -93,6 +121,7 @@ export default function Header() {
         Browse Recipes
       </Link>
       <button
+        ref={buttonRef}
         type="button"
         className="bg-gray-200 
          rounded md:hidden p-2"

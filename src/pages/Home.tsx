@@ -16,7 +16,7 @@ export default function Home() {
           meals, zero fuss
         </h1>
         <p
-          className="text-preset-6 text-neutral-800
+          className="text-preset-6  text-gray-700
       
       max-w-150 lg:text-center text-left"
         >
@@ -30,7 +30,7 @@ export default function Home() {
           Start exploring{" "}
         </a>
       </div>
-      <div className="xl:h-[530px] xl:w-[1192px] w-full  rounded-2xl overflow-hidden">
+      <div className="xl:h-132.5 xl:w-298 w-full  rounded-2xl overflow-hidden">
         <img
           src={`${baseUrl}/assets/images/image-home-hero-small.webp`}
           alt=""
@@ -44,55 +44,55 @@ export default function Home() {
       <div
         className="grid lg:grid-cols-3  gap-4 grid-cols-1
       w-full  lg:justify-items-center border-b pb-12 border-gray-400
-      max-w-[1440px]
+      max-w-360
       "
       >
-        <span className="lg:max-w-[370px] pr-4 flex flex-col gap-4">
+        <span className="lg:max-w-92.5 pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-whole-food-recipes.svg`}
             alt=""
-            className="bg-white w-[3rem] h-[3rem] py-1 px-3 rounded"
+            className="bg-white w-12 h-12 py-1 px-3 rounded"
           />
           <h3 className="text-preset-3">Whole-food recipes </h3>
-          <p className="text-preset-6 text-neutral-800">
+          <p className="text-preset-6  text-gray-700">
             Each dish uses everyday, unprocessed ingredients.
           </p>
         </span>
-        <span className="lg:max-w-[370px] pr-4 flex flex-col gap-4">
+        <span className="lg:max-w-92.5 pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-minimum-fuss.svg`}
             alt=""
-            className="bg-white p-1 w-[3rem] h-[3rem] rounded"
+            className="bg-white p-1 w-12 h-12 rounded"
           />
           <h3 className="text-preset-3">Minimum fuss</h3>
 
-          <p className="text-preset-6 text-neutral-800">
+          <p className="text-preset-6  text-gray-700">
             All recipes are designed to make eating healthy quick and easy.
           </p>
         </span>
 
-        <span className="lg:max-w-[370px] pr-4 flex flex-col gap-4">
+        <span className="lg:max-w-92.5 pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-search-in-seconds.svg`}
             alt=""
             className="bg-white p-1 
-            w-[3rem] h-[3rem] rounded"
+            w-12 h-12 rounded"
           />
           <h3 className="text-preset-3">Search in seconds</h3>
-          <p className="text-preset-6 text-neutral-800">
+          <p className="text-preset-6  text-gray-700">
             Filter by name or ingredient and jump straight to the recipe you
             need.
           </p>
         </span>
       </div>
 
-      <div className="flex flex-col xl:flex-row justify-between items-center gap-4 max-w-[1440px] w-full">
+      <div className="flex flex-col xl:flex-row justify-between items-center gap-4 max-w-360 w-full">
         <span
           className="xl:w-1/2
         xl:max-w-[500px]: xl:px-6 flex flex-col gap-4"
         >
           <h2 className="text-preset-2 text-green-950">Built for real life</h2>
-          <p className="text-preset-6 text-neutral-800 xl:max-w-[550px]">
+          <p className="text-preset-6  text-gray-700 xl:max-w-137.5">
             {" "}
             Cooking shouldn't be complicated. These recipes come in under
             <span
@@ -101,26 +101,26 @@ export default function Home() {
              "
             >
               30 minutes
-              <span className="absolute left-0 bottom-1 w-[100%] h-4 bg-orange-400 rounded -z-10 shadow"></span>
+              <span className="absolute left-0 bottom-1 w-full h-4 bg-orange-400 rounded -z-10 shadow"></span>
             </span>
             of active time, fit busy schedules, and taste good enough to repeat.
           </p>
-          <p className="text-preset-6 text-neutral-800 xl:max-w-[550px]">
+          <p className="text-preset-6  text-gray-700 xl:max-w-137.5">
             Whether you're new to the kitchen or just need fresh ideas, we've
             got you covered.
           </p>
         </span>
         <img
           src={`${baseUrl}/assets/images/image-home-real-life-large.webp`}
-          className="xl:w-[700px]
+          className="xl:w-175
           rounded w-full h-full object-cover"
         />
       </div>
       <div
         className="flex flex-col justify-center items-center
         relative
-        w-full max-w-[1440px]
-        bg-blue-50 rounded-2xl
+        w-full max-w-360
+        ne-200 rounded-2xl
         h-100
         overflow-hidden
         gap-6
@@ -151,7 +151,7 @@ export default function Home() {
           Ready to cook smarter?
         </h2>
         <p
-          className="text-preset-6 text-neutral-800
+          className="text-preset-6  text-gray-700
         z-10 text-center"
         >
           {" "}

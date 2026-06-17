@@ -87,8 +87,18 @@
   }
 }
 
+:root {
+  --neutral-100: #f6f5f1;
+  --neutral-200: #e0e6e3;
+  --neutral-300: #d0dcd9;
+}
+
+.ne-200 {
+  background-color: var(--neutral-200);
+}
+
 body {
-  background-color: rgb(248, 244, 239);
+  background-color: var(--neutral-100);
   background-image: url("/assets/images/pattern-squiggle-1.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
