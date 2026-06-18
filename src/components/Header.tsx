@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 const baseUrl = import.meta.env.BASE_URL;
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+
   const location = useLocation();
   const navRef = useRef<HTMLElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -33,13 +33,11 @@ export default function Header() {
   useEffect(() => {
     setIsMenuOpen(false);
   }, [location.pathname]);
+
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 768) {
+      if (window.innerWidth >= 768) {
         setIsMenuOpen(false);
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
       }
     };
     window.addEventListener("resize", handleResize);
@@ -63,16 +61,13 @@ export default function Header() {
       </h1>
       <nav
         ref={navRef}
-        className={`absolute md:static top-[102%] z-20 nav flex flex-row items-center w-full md:w-fit transition-all duration-300 ease-in-out
-         ${
-           isMobile
-             ? isMenuOpen
-               ? "opacity-100 translate-y-0 visible"
-               : "opacity-0 -translate-y-4 invisible"
-             : "opacity-100 translate-y-0 visible"
-         }
-        
-        `}
+        className={`absolute md:static top-[102%] z-20 w-full md:w-fit md:transition-none transition-transform duration-300 ease-in-out
+    ${
+      isMenuOpen
+        ? "opacity-100 translate-y-0 visible"
+        : "opacity-0 -translate-y-4 invisible md:opacity-100 md:translate-y-0 md:visible"
+    }
+  `}
       >
         <ul className="nav-list flex flex-col items-start p-3 md:flex-row text-green-950 text-preset-7 md:gap-10 gap-4 bg-white md:bg-transparent w-[90%] md:max-w-fit ">
           <li className=" ">

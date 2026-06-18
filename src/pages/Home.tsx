@@ -1,4 +1,4 @@
-export const baseUrl = import.meta.env.BASE_URL;
+const baseUrl = import.meta.env.BASE_URL;
 
 export default function Home() {
   return (

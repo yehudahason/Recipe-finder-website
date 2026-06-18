@@ -1,8 +1,6 @@
-const baseUrl = import.meta.env.BASE_URL;
-
-import bulletIcon from "../../public/assets/images/icon-bullet-point.svg";
-
 export default function About() {
+  const baseUrl = import.meta.env.BASE_URL;
+  const bulletIcon = baseUrl + "/assets/images/icon-bullet-point.svg";
   return (
     <main className="grid grid-cols-1 justify-center justify-items-center gap-22 px-8 py-12">
       <div className="flex flex-col xl:flex-row justify-between items-center gap-4 max-w-360 w-full relative">
