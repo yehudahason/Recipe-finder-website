@@ -27,9 +27,9 @@ export default function Recipes() {
         </p>
       </div>
 
-      <div className="flex items-center w-full max-w-360 justify-between gap-4 lg:flex-row flex-col text-preset-7 text-gray-700">
-        <div className="flex gap-4 lg:flex-row flex-col lg:max-w-fit max-w-full w-full">
-          <select className="appearance-none h-10 rounded-lg border border-gray-200 bg-white px-4  ">
+      <div className="flex items-center w-full max-w-360 justify-between gap-4 md:flex-row flex-col text-preset-7 text-gray-700">
+        <div className="flex gap-4 md:flex-row flex-col lg:max-w-fit md:w-1/2 max-w-full w-full">
+          <select className=" h-10 rounded-lg border border-gray-200 bg-white px-4  ">
             <option value="">Max Prep Time</option>
             <option value="10">10 mins</option>
             <option value="20">20 mins</option>
@@ -38,7 +38,7 @@ export default function Recipes() {
             <option value="60">60 mins</option>
           </select>
 
-          <select className="appearance-none h-10 rounded-lg border border-gray-200 bg-white px-4 ">
+          <select className=" h-10 rounded-lg border border-gray-200 bg-white px-4 ">
             <option value="">Max Cook Time</option>
             <option value="10">10 mins</option>
             <option value="20">20 mins</option>
@@ -48,7 +48,7 @@ export default function Recipes() {
           </select>
         </div>
 
-        <div className="relative w-full lg:max-w-fit">
+        <div className="relative w-full lg:max-w-fit md:w-4/9">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
