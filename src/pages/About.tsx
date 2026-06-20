@@ -53,7 +53,7 @@ export default function About() {
               src={bulletIcon}
               alt=""
               aria-hidden="true"
-              className="absolute -top-1 -left-10"
+              className="absolute top-0 -left-10"
             />
             <b className="text-preset-4">Cut through the noise.</b>
             <p className="text-preset-6  text-gray-700">
@@ -68,7 +68,7 @@ export default function About() {
               src={bulletIcon}
               alt=""
               aria-hidden="true"
-              className="absolute -top-1 -left-10"
+              className="absolute top-0 -left-10"
             />
             <b className="text-preset-4">Empower home kitchens.</b>
             <p className="text-preset-6 text-gray-700">
@@ -82,7 +82,7 @@ export default function About() {
               src={bulletIcon}
               alt=""
               aria-hidden="true"
-              className="absolute -top-1 -left-10"
+              className="absolute top-0 -left-10"
             />
             <b className="text-preset-4">Make healthy look good.</b>
             <p className="text-preset-6  text-gray-700">
@@ -107,7 +107,7 @@ export default function About() {
               src={bulletIcon}
               alt=""
               aria-hidden="true"
-              className="absolute -top-1 -left-10"
+              className="absolute top-0 -left-10"
             />
             <b className="text-preset-4"> Whole ingredients first. </b>
             <p className="text-preset-6  text-gray-700">
@@ -120,7 +120,7 @@ export default function About() {
               src={bulletIcon}
               alt=""
               aria-hidden="true"
-              className="absolute -top-1 -left-10"
+              className="absolute top-0 -left-10"
             />
             <b className="text-preset-4">Flavor without compromise.</b>
             <p className="text-preset-6 text-gray-700">
@@ -133,7 +133,7 @@ export default function About() {
               src={bulletIcon}
               alt=""
               aria-hidden="true"
-              className="absolute -top-1 -left-10"
+              className="absolute top-0 -left-10"
             />
             <b className="text-preset-4">Respect for time.</b>
             <p className="text-preset-6  text-gray-700">
@@ -146,7 +146,7 @@ export default function About() {
               src={bulletIcon}
               alt=""
               aria-hidden="true"
-              className="absolute -top-1 -left-10"
+              className="absolute top-0 -left-10"
             />
             <b className="text-preset-4">Sustainable choices. </b>
             <p className="text-preset-6  text-gray-700">
