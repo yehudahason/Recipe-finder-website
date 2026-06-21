@@ -103,15 +103,21 @@ export default function Header() {
             text-preset-5 
             
             md:hidden"
+            onClick={() => {
+              setTimeout(() => window.location.reload(), 0);
+            }}
           >
             Browese Recipes
           </Link>
         </ul>
       </nav>
       <Link
-        to="#"
+        to="/recipes"
         className="hidden md:flex none  items-center justify-center py-3 px-4 bg-green-950 text-white rounded-xl
         text-preset-5 "
+        onClick={() => {
+          setTimeout(() => window.location.reload(), 0);
+        }}
       >
         Browse Recipes
       </Link>

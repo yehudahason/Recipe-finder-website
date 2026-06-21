@@ -271,7 +271,13 @@ export default function Recipes() {
                   <button
                     type="button"
                     className="text-preset-8 text-white w-full rounded-3xl bg-green-950 text-center py-3 cursor-pointer"
-                    onClick={() => handleSelect(el.id)}
+                    onClick={() => {
+                      handleSelect(el.id);
+                      window.scrollTo({
+                        top: 0,
+                        behavior: "smooth",
+                      });
+                    }}
                   >
                     View Recipe
                   </button>
