@@ -34,20 +34,21 @@ export default function Recipes() {
         <div className="flex gap-4 md:flex-row flex-col lg:max-w-fit md:w-1/2 max-w-full w-full">
           <select className=" h-10 rounded-lg border border-gray-200 bg-white px-4  ">
             <option value="">Max Prep Time</option>
+            <option value="0">0 mins</option>
+            <option value="5">5 mins</option>
             <option value="10">10 mins</option>
-            <option value="20">20 mins</option>
-            <option value="30">30 mins</option>
-            <option value="45">45 mins</option>
-            <option value="60">60 mins</option>
+            <option value="15">15 mins</option>
+            <option value="">Any</option>
           </select>
 
           <select className=" h-10 rounded-lg border border-gray-200 bg-white px-4 ">
             <option value="">Max Cook Time</option>
+            <option value="0">0 mins</option>
+            <option value="5">5 mins</option>
             <option value="10">10 mins</option>
+            <option value="15">15 mins</option>
             <option value="20">20 mins</option>
-            <option value="30">30 mins</option>
-            <option value="45">45 mins</option>
-            <option value="60">60 mins</option>
+            <option value="">Any</option>
           </select>
         </div>
 
