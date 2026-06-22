@@ -98,7 +98,7 @@ export default function Header() {
               Recipes
             </Link>
           </li>
-          <li>
+          <li className="md:hidden w-full">
             <Link
               to="/recipes"
               className="flex justify-center items-center p-2 
