@@ -16,7 +16,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
             bg-green-950 text-white rounded-xl
             text-preset-5 
             
-            md:hidden`,onClick:()=>{setTimeout(()=>window.location.reload(),0)},children:`Browese Recipes`})})]})}),(0,B.jsx)(z,{to:`/recipes`,className:`hidden md:flex none  items-center justify-center py-3 px-4 bg-green-950 text-white rounded-xl
+            md:hidden`,onClick:()=>{setTimeout(()=>window.location.reload(),800)},children:`Browese Recipes`})})]})}),(0,B.jsx)(z,{to:`/recipes`,className:`hidden md:flex none  items-center justify-center py-3 px-4 bg-green-950 text-white rounded-xl
         text-preset-5 `,onClick:()=>{setTimeout(()=>window.location.reload(),0)},children:`Browse Recipes`}),(0,B.jsx)(`button`,{ref:i,type:`button`,className:`bg-gray-200 
          rounded md:hidden p-2`,onClick:()=>t(!e),children:(0,B.jsx)(`img`,{src:`/Recipe-finder-website//assets/images/icon-hamburger-menu.svg`,alt:`menu`,className:`h-5`})})]})}function na(){return(0,B.jsxs)(`div`,{className:`attribution`,children:[`Challenge by`,(0,B.jsx)(`a`,{href:`https://www.frontendmentor.io?ref=challenge`,target:`_blank`,rel:`noopener noreferrer`,children:`Frontend Mentor`}),(0,B.jsx)(`span`,{className:`separator`,"aria-hidden":`true`,children:`•`}),`Coded by`,(0,B.jsx)(`a`,{href:`https://www.frontendmentor.io/profile/yehudahason`,target:`_blank`,rel:`noopener noreferrer`,children:`@Yehuda Hason`})]})}function ra(){return(0,B.jsxs)(`footer`,{className:`footer flex flex-col items-center justify-center max-w-360 mx-auto mt-8`,children:[(0,B.jsxs)(`div`,{className:`flex w-full
       sm:flex-row 
