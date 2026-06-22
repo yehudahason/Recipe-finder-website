@@ -42,7 +42,7 @@ export default function Home() {
           className="w-full h-full object-cover"
         />
       </div>
-      <h2 className="text-preset-2 text-green-950 lg:text-center text-left w-full">
+      <h2 className="sm:text-preset-2 text-preset-3 text-green-950 lg:text-center text-left w-full">
         What you'll get
       </h2>
 
@@ -96,7 +96,9 @@ export default function Home() {
           className="xl:w-1/2
         xl:max-w-[500px]: xl:px-6 flex flex-col gap-4"
         >
-          <h2 className="text-preset-2 text-green-950">Built for real life</h2>
+          <h2 className="sm:text-preset-2 text-preset-3 text-green-950">
+            Built for real life
+          </h2>
           <p className="text-preset-6  text-gray-700 xl:max-w-137.5">
             {" "}
             Cooking shouldn't be complicated. These recipes come in under

@@ -130,6 +130,10 @@ export default function Recipes() {
             </div>
           </div>
 
+          <div className="h-px w-full bg-gray-700"></div>
+          <h3 className="text-preset-3 text-green-950 w-full text-left pl-12">
+            More recipes
+          </h3>
           <ul
             className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6"
             aria-label="another recipes"
