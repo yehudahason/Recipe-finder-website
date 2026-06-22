@@ -111,7 +111,7 @@ export default function Header() {
                 setTimeout(() => window.location.reload(), 800);
               }}
             >
-              Browese Recipes
+              Browse Recipes
             </Link>
           </li>
         </ul>
