@@ -13,6 +13,10 @@ export default function Recipes() {
     if (list) setSelectedRecipe(list[id - 1]);
   }
 
+  function ranlist() {
+    const unique3el = list?.sort(() => Math.random() - 0.5).slice(0, 3);
+    return unique3el;
+  }
   useEffect(() => {
     async function getData() {
       try {
@@ -78,65 +82,62 @@ export default function Recipes() {
           </li>
 
           <ul className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6">
-            {list
-              ?.slice(0, 3)
-
-              .map((el: Recipe) => (
-                <li
-                  className=" md:max-w-94 p-4 bg-white border border-gray-300  rounded-xl flex justify-center items-start flex-col gap-3"
-                  key={el.id}
+            {ranlist()?.map((el: Recipe) => (
+              <li
+                className=" md:max-w-94 p-4 bg-white border border-gray-300  rounded-xl flex justify-center items-start flex-col gap-3"
+                key={el.id}
+              >
+                <img
+                  src={`${baseUrl}${el.image.small}`}
+                  alt=""
+                  className="md:h-90 md:w-90  rounded-xl w-full h-auto"
+                />
+                <h2 className="text-preset-5 text-green-950 text-left">
+                  {" "}
+                  {el.title.slice(0, 33)}
+                  {el.title.length > 33 ? "..." : ""}
+                </h2>
+                <p>{el.overview}</p>
+                <div className="flex  flex-wrap justify-start items-center gap-4">
+                  <span className="flex text-preset-9 text-green-950 gap-2 justify-center items-center">
+                    <img
+                      src={`${baseUrl}/assets/images/icon-servings.svg`}
+                      alt=""
+                    />
+                    Serving : {el.servings}
+                  </span>
+                  <span className="flex  text-preset-9 text-green-950 gap-2 justify-center items-center">
+                    <img
+                      src={`${baseUrl}/assets/images/icon-prep-time.svg`}
+                      alt=""
+                    />
+                    Prep: {el.prepMinutes}{" "}
+                    {el.prepMinutes > 1 ? " mins" : " min"}
+                  </span>
+                  <span className="flex gap-2 text-preset-9 text-green-950 justify-center items-center">
+                    <img
+                      src={`${baseUrl}/assets/images/icon-cook-time.svg`}
+                      alt=""
+                    />
+                    Cook : {el.cookMinutes}
+                    {el.cookMinutes > 1 ? " mins" : " min"}
+                  </span>
+                </div>
+                <button
+                  type="button"
+                  className="text-preset-8 text-white w-full rounded-3xl bg-green-950 text-center py-3 cursor-pointer"
+                  onClick={() => {
+                    handleSelect(el.id);
+                    window.scrollTo({
+                      top: 0,
+                      behavior: "smooth",
+                    });
+                  }}
                 >
-                  <img
-                    src={`${baseUrl}${el.image.small}`}
-                    alt=""
-                    className="md:h-90 md:w-90  rounded-xl w-full h-auto"
-                  />
-                  <h2 className="text-preset-5 text-green-950 text-left">
-                    {" "}
-                    {el.title.slice(0, 33)}
-                    {el.title.length > 33 ? "..." : ""}
-                  </h2>
-                  <p>{el.overview}</p>
-                  <div className="flex  flex-wrap justify-start items-center gap-4">
-                    <span className="flex text-preset-9 text-green-950 gap-2 justify-center items-center">
-                      <img
-                        src={`${baseUrl}/assets/images/icon-servings.svg`}
-                        alt=""
-                      />
-                      Serving : {el.servings}
-                    </span>
-                    <span className="flex  text-preset-9 text-green-950 gap-2 justify-center items-center">
-                      <img
-                        src={`${baseUrl}/assets/images/icon-prep-time.svg`}
-                        alt=""
-                      />
-                      Prep: {el.prepMinutes}{" "}
-                      {el.prepMinutes > 1 ? " mins" : " min"}
-                    </span>
-                    <span className="flex gap-2 text-preset-9 text-green-950 justify-center items-center">
-                      <img
-                        src={`${baseUrl}/assets/images/icon-cook-time.svg`}
-                        alt=""
-                      />
-                      Cook : {el.cookMinutes}
-                      {el.cookMinutes > 1 ? " mins" : " min"}
-                    </span>
-                  </div>
-                  <button
-                    type="button"
-                    className="text-preset-8 text-white w-full rounded-3xl bg-green-950 text-center py-3 cursor-pointer"
-                    onClick={() => {
-                      handleSelect(el.id);
-                      window.scrollTo({
-                        top: 0,
-                        behavior: "smooth",
-                      });
-                    }}
-                  >
-                    View Recipe
-                  </button>
-                </li>
-              ))}
+                  View Recipe
+                </button>
+              </li>
+            ))}
           </ul>
         </>
       ) : (
