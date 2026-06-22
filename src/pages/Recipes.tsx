@@ -39,10 +39,13 @@ export default function Recipes() {
   }, [baseUrl]);
 
   return (
-    <main className="grid grid-cols-1 max-w-360 justify-center justify-items-center gap-16 px-12 py-12 mx-auto">
+    <main className="grid grid-cols-1 max-w-360 justify-center justify-items-center gap-16 sm:px-12  px-4 py-12 mx-auto">
       {selectedRecipe ? (
         <>
-          <h4 className="text-preset-7 text-gray-500 w-full text-left">
+          <h4
+            className="text-preset-7
+           text-gray-500 w-full text-left"
+          >
             Recipes /{" "}
             <span className="text-gray-700"> {selectedRecipe.title}</span>
           </h4>
@@ -189,7 +192,11 @@ export default function Recipes() {
       ) : (
         <>
           <div className="flex flex-col items-center gap-4 max-w-190">
-            <h1 className="text-preset-2 text-green-950 text-center">
+            <h1
+              className="sm:text-preset-2
+            text-preset-3
+            text-green-950 text-center"
+            >
               Explore our simple, healthy recipes
             </h1>
             <p className="text-preset-6  text-center text-gray-700">
