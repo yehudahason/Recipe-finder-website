@@ -94,9 +94,6 @@ export default function Header() {
             <Link
               to="/recipes"
               className="py-2  border-b-4 border-transparent transition hover:border-b-orange-400"
-              onClick={() => {
-                setTimeout(() => window.location.reload(), 0);
-              }}
             >
               Recipes
             </Link>
