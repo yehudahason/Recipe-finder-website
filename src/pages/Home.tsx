@@ -101,7 +101,7 @@ export default function Home() {
           </h2>
           <p className="text-preset-6  text-gray-700 xl:max-w-137.5">
             {" "}
-            Cooking shouldn't be complicated. These recipes come in under
+            Cooking shouldn't be complicated. These recipes come in under{" "}
             <span
               className="relative
             inline-block
@@ -109,7 +109,7 @@ export default function Home() {
             >
               30 minutes
               <span className="absolute left-0 bottom-1 w-full h-4 bg-orange-400 rounded -z-10 shadow"></span>
-            </span>
+            </span>{" "}
             of active time, fit busy schedules, and taste good enough to repeat.
           </p>
           <p className="text-preset-6  text-gray-700 xl:max-w-137.5">
