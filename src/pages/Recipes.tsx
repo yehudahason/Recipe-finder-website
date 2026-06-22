@@ -3,6 +3,7 @@ import type { Recipe } from "../types";
 
 export default function Recipes() {
   const baseUrl = import.meta.env.BASE_URL;
+  const bulletIcon = baseUrl + "/assets/images/icon-bullet-point.svg";
   const [list, setList] = useState<Recipe[] | null>(null);
   const [cookTime, setCookTime] = useState<string>("50");
   const [prepTime, setPrepTime] = useState<string>("50");
@@ -14,7 +15,9 @@ export default function Recipes() {
   }
 
   function ranlist() {
-    const unique3el = list?.sort(() => Math.random() - 0.5).slice(0, 3);
+    let unique3el = [...(list || [])];
+
+    unique3el = unique3el.sort(() => Math.random() - 0.5).slice(0, 3);
     return unique3el;
   }
   useEffect(() => {
@@ -36,50 +39,93 @@ export default function Recipes() {
   }, [baseUrl]);
 
   return (
-    <main className="grid grid-cols-1 justify-center justify-items-center gap-16 px-8 py-12">
+    <main className="grid grid-cols-1 max-w-360 justify-center justify-items-center gap-16 px-12 py-12 mx-auto">
       {selectedRecipe ? (
         <>
-          <li
-            className=" md:max-w-94 p-4 bg-white border border-gray-300  rounded-xl flex justify-center items-start flex-col gap-3"
-            key={selectedRecipe.id}
-          >
+          <h4 className="text-preset-7 text-gray-500 w-full text-left">
+            Recipes /{" "}
+            <span className="text-gray-700"> {selectedRecipe.title}</span>
+          </h4>
+          <div className="   rounded-xl flex lg:items-start  items-center lg:flex-row flex-col  gap-8 w-full">
             <img
-              src={`${baseUrl}${selectedRecipe.image.small}`}
+              src={`${baseUrl}${selectedRecipe.image.large}`}
               alt=""
-              className="md:h-90 md:w-90  rounded-xl w-full h-auto"
+              className="lg:h-145 lg:w-145  rounded-xl max-w-130 w-full h-auto"
             />
-            <h2 className="text-preset-5 text-green-950 text-left">
-              {" "}
-              {selectedRecipe.title.slice(0, 33)}
-              {selectedRecipe.title.length > 33 ? "..." : ""}
-            </h2>
-            <p>{selectedRecipe.overview}</p>
-            <div className="flex  flex-wrap justify-start items-center gap-4">
-              <span className="flex text-preset-9 text-green-950 gap-2 justify-center items-center">
-                <img
-                  src={`${baseUrl}/assets/images/icon-servings.svg`}
-                  alt=""
-                />
-                Serving : {selectedRecipe.servings}
-              </span>
-              <span className="flex  text-preset-9 text-green-950 gap-2 justify-center items-center">
-                <img
-                  src={`${baseUrl}/assets/images/icon-prep-time.svg`}
-                  alt=""
-                />
-                Prep: {selectedRecipe.prepMinutes}{" "}
-                {selectedRecipe.prepMinutes > 1 ? " mins" : " min"}
-              </span>
-              <span className="flex gap-2 text-preset-9 text-green-950 justify-center items-center">
-                <img
-                  src={`${baseUrl}/assets/images/icon-cook-time.svg`}
-                  alt=""
-                />
-                Cook : {selectedRecipe.cookMinutes}
-                {selectedRecipe.cookMinutes > 1 ? " mins" : " min"}
-              </span>
+            <div className="flex flex-col md:w-170 gap-4">
+              <h2
+                className="sm:text-preset-2 
+              text-preset-4
+              text-green-950 text-left"
+              >
+                {selectedRecipe.title}
+              </h2>
+              <p className="text-preset-6 text-gray-600">
+                {selectedRecipe.overview}
+              </p>
+              <div className="flex  flex-wrap justify-start items-center gap-4">
+                <span className="flex text-preset-9 text-green-950 gap-2 justify-center items-center">
+                  <img
+                    src={`${baseUrl}/assets/images/icon-servings.svg`}
+                    alt=""
+                  />
+                  Serving : {selectedRecipe.servings}
+                </span>
+                <span className="flex  text-preset-9 text-green-950 gap-2 justify-center items-center">
+                  <img
+                    src={`${baseUrl}/assets/images/icon-prep-time.svg`}
+                    alt=""
+                  />
+                  Prep: {selectedRecipe.prepMinutes}{" "}
+                  {selectedRecipe.prepMinutes > 1 ? " mins" : " min"}
+                </span>
+                <span className="flex gap-2 text-preset-9 text-green-950 justify-center items-center">
+                  <img
+                    src={`${baseUrl}/assets/images/icon-cook-time.svg`}
+                    alt=""
+                  />
+                  Cook : {selectedRecipe.cookMinutes}
+                  {selectedRecipe.cookMinutes > 1 ? " mins" : " min"}
+                </span>
+              </div>
+              <h4 className="text-preset-4 text-green-950">Ingredients:</h4>
+              <ul>
+                {selectedRecipe.ingredients.map((el) => {
+                  return (
+                    <li
+                      key={el}
+                      className="flex gap-2 items-start text-preset-6 text-gray-600 "
+                    >
+                      <img
+                        className="h-5 translate-y-1"
+                        src={bulletIcon}
+                        alt=""
+                      />{" "}
+                      {el}
+                    </li>
+                  );
+                })}
+              </ul>
+              <h4 className="text-preset-4 text-green-950">Instructions:</h4>
+              <ul>
+                {selectedRecipe.instructions.map((el) => {
+                  return (
+                    <li
+                      key={el}
+                      className="flex gap-2 items-start text-preset-6 text-gray-600 "
+                    >
+                      <img
+                        className="h-5 translate-y-1"
+                        src={bulletIcon}
+                        alt=""
+                      />{" "}
+                      {el}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
-          </li>
+          </div>
 
           <ul className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6">
             {ranlist()?.map((el: Recipe) => (
@@ -97,7 +143,7 @@ export default function Recipes() {
                   {el.title.slice(0, 33)}
                   {el.title.length > 33 ? "..." : ""}
                 </h2>
-                <p>{el.overview}</p>
+                <p className="text-preset-6 text-gray-600">{el.overview}</p>
                 <div className="flex  flex-wrap justify-start items-center gap-4">
                   <span className="flex text-preset-9 text-green-950 gap-2 justify-center items-center">
                     <img
