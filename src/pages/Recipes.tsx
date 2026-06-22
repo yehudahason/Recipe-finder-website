@@ -49,8 +49,18 @@ export default function Recipes() {
             className="text-preset-7
            text-gray-500 w-full text-left"
           >
-            Recipes /{" "}
-            <span className="text-gray-700"> {selectedRecipe.title}</span>
+            <button
+              className="border-0 bg-0 cursor-pointer"
+              type="button"
+              onClick={() => {
+                window.location.reload();
+              }}
+            >
+              Recipes &nbsp;
+            </button>
+            <span className="text-gray-700">
+              /&nbsp; {selectedRecipe.title}
+            </span>
           </h4>
           <div className="   rounded-xl flex lg:items-start  items-center lg:flex-row flex-col  gap-8 w-full">
             <img

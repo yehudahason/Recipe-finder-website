@@ -77,6 +77,7 @@ export default function Header() {
           <li className=" ">
             <NavLink
               to="/"
+              end
               className={({ isActive }) =>
                 `border-b-4 py-2 transition ${
                   isActive
