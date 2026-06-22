@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
 const baseUrl = import.meta.env.BASE_URL;
@@ -75,31 +75,49 @@ export default function Header() {
           aria-label="menu links"
         >
           <li className=" ">
-            <Link
+            <NavLink
               to="/"
-              className=" border-b-4 border-transparent transition hover:border-b-orange-400 py-2"
+              className={({ isActive }) =>
+                `border-b-4 py-2 transition ${
+                  isActive
+                    ? "border-b-orange-400"
+                    : "border-transparent hover:border-b-orange-400"
+                }`
+              }
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="">
-            <Link
+            <NavLink
               to="/about"
-              className="py-2  border-b-4 border-transparent transition hover:border-b-orange-400"
+              className={({ isActive }) =>
+                `border-b-4 py-2 transition ${
+                  isActive
+                    ? "border-b-orange-400"
+                    : "border-transparent hover:border-b-orange-400"
+                }`
+              }
             >
               About
-            </Link>
+            </NavLink>
           </li>
           <li className="">
-            <Link
+            <NavLink
               to="/recipes"
-              className="py-2  border-b-4 border-transparent transition hover:border-b-orange-400"
+              className={({ isActive }) =>
+                `border-b-4 py-2 transition ${
+                  isActive
+                    ? "border-b-orange-400"
+                    : "border-transparent hover:border-b-orange-400"
+                }`
+              }
             >
               Recipes
-            </Link>
+            </NavLink>
           </li>
           <li className="md:hidden w-full">
-            <Link
+            <NavLink
               to="/recipes"
               className="flex justify-center items-center p-2 
             w-full
@@ -112,11 +130,11 @@ export default function Header() {
               }}
             >
               Browse Recipes
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
-      <Link
+      <NavLink
         to="/recipes"
         className="hidden md:flex none  items-center justify-center py-3 px-4 bg-green-950 text-white rounded-xl
         text-preset-5 "
@@ -125,7 +143,7 @@ export default function Header() {
         }}
       >
         Browse Recipes
-      </Link>
+      </NavLink>
       <button
         ref={buttonRef}
         type="button"
