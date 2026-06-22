@@ -11,15 +11,13 @@ export default function Recipes() {
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
 
   function handleSelect(id: number) {
-    if (list) setSelectedRecipe(list[id - 1]);
+    if (list)
+      setSelectedRecipe(list.find((recipe) => recipe.id === id) ?? null);
   }
+  const moreRecipes = list
+    ?.filter((recipe) => recipe.id !== selectedRecipe?.id)
+    .slice(0, 3);
 
-  function ranlist() {
-    let unique3el = [...(list || [])];
-
-    unique3el = unique3el.sort(() => Math.random() - 0.5).slice(0, 3);
-    return unique3el;
-  }
   useEffect(() => {
     async function getData() {
       try {
@@ -138,7 +136,7 @@ export default function Recipes() {
             className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6"
             aria-label="another recipes"
           >
-            {ranlist()?.map((el: Recipe) => (
+            {moreRecipes?.map((el: Recipe) => (
               <li
                 className=" md:max-w-94 p-4 bg-white border border-gray-300  rounded-xl flex justify-center items-start flex-col gap-3"
                 key={el.id}
