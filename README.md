@@ -8,7 +8,7 @@ This is a solution to the [Recipe finder website challenge on Frontend Mentor](h
 
 ### Links
 
-- My solution at : [GitHub Pages](https://yehudahason.github.io/Recipe-finder-website/#/recipes)
+- My solution at : [GitHub Pages](https://yehudahason.github.io/Recipe-finder-website/)
 
 ### Built with
 
