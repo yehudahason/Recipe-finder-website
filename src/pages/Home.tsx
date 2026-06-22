@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 const baseUrl = import.meta.env.BASE_URL;
 
 export default function Home() {
@@ -23,19 +24,16 @@ export default function Home() {
           Discover eight quick, whole-food recipes that you can cook tonight —no
           processed junk, no guesswork.
         </p>
-        <a
-          href={`${baseUrl}#/recipes`}
+        <Link
+          to="/recipes"
           className=" p-4 bg-green-950 rounded-xl
         text-white
         text-preset-5
         z-10
         "
-          onClick={() => {
-            setTimeout(() => window.location.reload(), 0);
-          }}
         >
           Start exploring{" "}
-        </a>
+        </Link>
       </div>
       <div className="xl:h-132.5 xl:w-298 w-full  rounded-2xl overflow-hidden">
         <img
@@ -165,19 +163,16 @@ export default function Home() {
           {" "}
           Hit the button, pick a recipe, and get dinner on the table—fast.
         </p>
-        <a
-          href={`${baseUrl}#/recipes`}
+        <Link
+          to="/recipes"
           className=" p-4 bg-green-950 rounded-xl
         text-white
         text-preset-5
         z-10
         "
-          onClick={() => {
-            setTimeout(() => window.location.reload(), 0);
-          }}
         >
           Browse recipes
-        </a>
+        </Link>
       </div>
     </main>
   );

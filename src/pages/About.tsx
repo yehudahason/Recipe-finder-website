@@ -239,9 +239,6 @@ export default function About() {
         text-preset-5
         z-10
         "
-          onClick={() => {
-            setTimeout(() => window.location.reload(), 0);
-          }}
         >
           Browse recipes
         </Link>
