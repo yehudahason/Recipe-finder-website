@@ -29,6 +29,7 @@ export default function About() {
         </span>
         <img
           src={`${baseUrl}/assets/images/image-about-our-mission-large.webp`}
+          alt="our mission"
           className="xl:w-155
                   rounded-xl lg:w-3/4 md:w-8/9  w-full h-full object-cover"
         />
@@ -36,6 +37,7 @@ export default function About() {
           src={`${baseUrl}/assets/images/pattern-squiggle-2.svg`}
           className="lg:block hidden w-26
                   absolute object-cover top-1/2 -right-9"
+          alt="squiggle"
         />
       </div>
       <div
@@ -47,7 +49,7 @@ export default function About() {
         <h2 className="lg:text-preset-2 text-preset-3 text-green-950">
           Why we exist
         </h2>
-        <ul className=" flex flex-col gap-4">
+        <ul className=" flex flex-col gap-4" aria-label="list">
           <li className="relative flex flex-col gap-4">
             <img
               src={bulletIcon}
@@ -101,7 +103,7 @@ export default function About() {
         <h2 className="lg:text-preset-2 text-preset-3 text-green-950">
           Our food philosophy
         </h2>
-        <ul className=" flex flex-col gap-4">
+        <ul className=" flex flex-col gap-4" aria-label="list">
           <li className="relative flex flex-col gap-4">
             <img
               src={bulletIcon}
@@ -168,7 +170,10 @@ export default function About() {
             We believe food is a catalyst for community and well-being. By
             sharing approachable recipes, we hope to:
           </p>
-          <ul className="list-disc xl:max-w-100 pl-5 text-preset-6  text-gray-700">
+          <ul
+            className="list-disc xl:max-w-100 pl-5 text-preset-6  text-gray-700"
+            aria-label="list"
+          >
             <li>Encourage family dinners and social cooking. </li>
             <li>Reduce reliance on single-use packaging and delivery waste.</li>
             <li>
@@ -181,6 +186,7 @@ export default function About() {
           src={`${baseUrl}/assets/images/image-about-beyond-the-plate-large.webp`}
           className="xl:h-100 xl:w-187.5 lg:w-3/4
                   rounded-xl md:w-8/9 w-full h-full object-cover"
+          alt="about-beyond-the-plate"
         />
       </div>
       <div
@@ -196,7 +202,7 @@ export default function About() {
       >
         <img
           src={`${baseUrl}/assets/images/pattern-fork.svg`}
-          alt=""
+          alt="fork"
           className="absolute -left-17 bottom-0
                 z-0
                 lg:block hidden
@@ -204,7 +210,7 @@ export default function About() {
         />
         <img
           src={`${baseUrl}/assets/images/pattern-knife.svg`}
-          alt=""
+          alt="knife"
           className="absolute -right-17 top-5
                 lg:block hidden
                 z-0"
@@ -225,12 +231,15 @@ export default function About() {
           Hit the button, pick a recipe, and get dinner on the table—fast.
         </p>
         <a
-          href=""
+          href={`${baseUrl}#/recipes`}
           className=" p-4 bg-green-950 rounded-xl
-              text-white
-              text-preset-5
-              z-10
-              "
+        text-white
+        text-preset-5
+        z-10
+        "
+          onClick={() => {
+            setTimeout(() => window.location.reload(), 0);
+          }}
         >
           Browse recipes
         </a>

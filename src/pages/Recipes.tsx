@@ -92,7 +92,7 @@ export default function Recipes() {
                 </span>
               </div>
               <h4 className="text-preset-4 text-green-950">Ingredients:</h4>
-              <ul>
+              <ul aria-label="Ingredients">
                 {selectedRecipe.ingredients.map((el) => {
                   return (
                     <li
@@ -110,7 +110,7 @@ export default function Recipes() {
                 })}
               </ul>
               <h4 className="text-preset-4 text-green-950">Instructions:</h4>
-              <ul>
+              <ul aria-label="Instructions">
                 {selectedRecipe.instructions.map((el) => {
                   return (
                     <li
@@ -130,7 +130,10 @@ export default function Recipes() {
             </div>
           </div>
 
-          <ul className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6">
+          <ul
+            className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6"
+            aria-label="another recipes"
+          >
             {ranlist()?.map((el: Recipe) => (
               <li
                 className=" md:max-w-94 p-4 bg-white border border-gray-300  rounded-xl flex justify-center items-start flex-col gap-3"
@@ -257,6 +260,7 @@ export default function Recipes() {
               </svg>
 
               <input
+                aria-label="search"
                 type="search"
                 placeholder="Search by name or ingredient..."
                 className="h-10  rounded-lg border border-slate-200 bg-white pl-10 pr-4 
@@ -268,7 +272,10 @@ export default function Recipes() {
             </div>
           </div>
 
-          <ul className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6">
+          <ul
+            className="grid xs:grid-cols-2 xl:grid-cols-3 justify-center  items-start grid-cols-1 gap-6"
+            aria-label="recipes list"
+          >
             {list
               ?.filter((sl) => sl.cookMinutes <= +cookTime)
               .filter((sl2) => sl2.prepMinutes <= +prepTime)

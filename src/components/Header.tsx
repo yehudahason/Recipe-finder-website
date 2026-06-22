@@ -70,7 +70,10 @@ export default function Header() {
     }
   `}
       >
-        <ul className="nav-list flex flex-col items-start p-3 md:flex-row text-green-950 text-preset-7 md:gap-10 gap-4 bg-white md:bg-transparent w-[90%] md:max-w-fit ">
+        <ul
+          className="nav-list flex flex-col items-start p-3 md:flex-row text-green-950 text-preset-7 md:gap-10 gap-4 bg-white md:bg-transparent w-[90%] md:max-w-fit "
+          aria-label="menu links"
+        >
           <li className=" ">
             <Link
               to="/"
@@ -98,21 +101,22 @@ export default function Header() {
               Recipes
             </Link>
           </li>
-
-          <Link
-            to="/recipes"
-            className="flex justify-center items-center p-2 
+          <li>
+            <Link
+              to="/recipes"
+              className="flex justify-center items-center p-2 
             w-full
             bg-green-950 text-white rounded-xl
             text-preset-5 
             
             md:hidden"
-            onClick={() => {
-              setTimeout(() => window.location.reload(), 0);
-            }}
-          >
-            Browese Recipes
-          </Link>
+              onClick={() => {
+                setTimeout(() => window.location.reload(), 0);
+              }}
+            >
+              Browese Recipes
+            </Link>
+          </li>
         </ul>
       </nav>
       <Link
@@ -134,7 +138,7 @@ export default function Header() {
       >
         <img
           src={baseUrl + "/assets/images/icon-hamburger-menu.svg"}
-          alt=""
+          alt="menu"
           className="h-5"
         />
       </button>

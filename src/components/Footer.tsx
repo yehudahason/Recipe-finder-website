@@ -21,18 +21,36 @@ export default function Footer() {
         >
           Made with &nbsp; ❤️ and &nbsp; 🥑
         </span>
-        <span className="flex items-center justify-center gap-4">
-          <Link to="#">
-            <img src={baseUrl + "/assets/images/icon-instagram.svg"} alt="" />
-          </Link>
-          <Link to="#">
-            <img src={baseUrl + "/assets/images/icon-tiktok.svg"} alt="" />
-          </Link>
+        <ul
+          className="flex items-center justify-center gap-4"
+          aria-label="socials links"
+        >
+          <li>
+            <Link to="#">
+              <img
+                src={baseUrl + "/assets/images/icon-instagram.svg"}
+                alt="instagram"
+              />
+            </Link>
+          </li>
+          <li>
+            <Link to="#">
+              <img
+                src={baseUrl + "/assets/images/icon-tiktok.svg"}
+                alt="tiktok"
+              />
+            </Link>
+          </li>
 
-          <Link to="#">
-            <img src={baseUrl + "/assets/images/icon-bluesky.svg"} alt="" />
-          </Link>
-        </span>
+          <li>
+            <Link to="#">
+              <img
+                src={baseUrl + "/assets/images/icon-bluesky.svg"}
+                alt="blue-sky"
+              />
+            </Link>
+          </li>
+        </ul>
       </div>
       <Footer2 />
     </footer>

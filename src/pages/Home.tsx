@@ -24,8 +24,15 @@ export default function Home() {
           processed junk, no guesswork.
         </p>
         <a
-          href=""
-          className=" p-4 bg-green-950 rounded-xl text-white text-preset-5 lg:self-center self-start"
+          href={`${baseUrl}#/recipes`}
+          className=" p-4 bg-green-950 rounded-xl
+        text-white
+        text-preset-5
+        z-10
+        "
+          onClick={() => {
+            setTimeout(() => window.location.reload(), 0);
+          }}
         >
           Start exploring{" "}
         </a>
@@ -33,7 +40,7 @@ export default function Home() {
       <div className="xl:h-132.5 xl:w-298 w-full  rounded-2xl overflow-hidden">
         <img
           src={`${baseUrl}/assets/images/image-home-hero-small.webp`}
-          alt=""
+          alt="hero"
           className="w-full h-full object-cover"
         />
       </div>
@@ -50,7 +57,7 @@ export default function Home() {
         <span className="lg:max-w-92.5 pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-whole-food-recipes.svg`}
-            alt=""
+            alt="Whole-food recipes"
             className="bg-white w-12 h-12 py-1 px-3 rounded"
           />
           <h3 className="text-preset-3">Whole-food recipes </h3>
@@ -61,7 +68,7 @@ export default function Home() {
         <span className="lg:max-w-92.5 pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-minimum-fuss.svg`}
-            alt=""
+            alt="Minimum fuss"
             className="bg-white p-1 w-12 h-12 rounded"
           />
           <h3 className="text-preset-3">Minimum fuss</h3>
@@ -74,7 +81,7 @@ export default function Home() {
         <span className="lg:max-w-92.5 pr-4 flex flex-col gap-4">
           <img
             src={`${baseUrl}/assets/images/icon-search-in-seconds.svg`}
-            alt=""
+            alt="search"
             className="bg-white p-1 
             w-12 h-12 rounded"
           />
@@ -114,6 +121,7 @@ export default function Home() {
           src={`${baseUrl}/assets/images/image-home-real-life-large.webp`}
           className="xl:w-175
           rounded w-full h-full object-cover"
+          alt="real life"
         />
       </div>
       <div
@@ -129,7 +137,7 @@ export default function Home() {
       >
         <img
           src={`${baseUrl}/assets/images/pattern-fork.svg`}
-          alt=""
+          alt="fork"
           className="absolute -left-17 bottom-0
           z-0
           lg:block hidden
@@ -137,7 +145,7 @@ export default function Home() {
         />
         <img
           src={`${baseUrl}/assets/images/pattern-knife.svg`}
-          alt=""
+          alt="knife"
           className="absolute -right-17 top-5
           lg:block hidden
           z-0"
@@ -158,12 +166,15 @@ export default function Home() {
           Hit the button, pick a recipe, and get dinner on the table—fast.
         </p>
         <a
-          href=""
+          href={`${baseUrl}#/recipes`}
           className=" p-4 bg-green-950 rounded-xl
         text-white
         text-preset-5
         z-10
         "
+          onClick={() => {
+            setTimeout(() => window.location.reload(), 0);
+          }}
         >
           Browse recipes
         </a>
