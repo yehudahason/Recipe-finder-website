@@ -91,7 +91,7 @@ Please change the parent <Route path="${e}"> to <Route path="${e===`/`?`*`:`${e}
                 text-preset-3
                 text-green-950 text-center
               z-10`,children:`Ready to cook smarter?`}),(0,B.jsxs)(`p`,{className:`text-preset-6  text-gray-700
-              z-10 text-center`,children:[` `,`Hit the button, pick a recipe, and get dinner on the table—fast.`]}),(0,B.jsx)(`a`,{href:`${e}#/recipes`,className:` p-4 bg-green-950 rounded-xl
+              z-10 text-center`,children:[` `,`Hit the button, pick a recipe, and get dinner on the table—fast.`]}),(0,B.jsx)(z,{to:`/recipes`,className:` p-4 bg-green-950 rounded-xl
         text-white
         text-preset-5
         z-10
