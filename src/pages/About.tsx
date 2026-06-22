@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function About() {
   const baseUrl = import.meta.env.BASE_URL;
   const bulletIcon = baseUrl + "/assets/images/icon-bullet-point.svg";
@@ -230,8 +232,8 @@ export default function About() {
           {" "}
           Hit the button, pick a recipe, and get dinner on the table—fast.
         </p>
-        <a
-          href={`${baseUrl}#/recipes`}
+        <Link
+          to="/recipes"
           className=" p-4 bg-green-950 rounded-xl
         text-white
         text-preset-5
@@ -242,7 +244,7 @@ export default function About() {
           }}
         >
           Browse recipes
-        </a>
+        </Link>
       </div>
     </main>
   );
